@@ -1,0 +1,15 @@
+name: testing
+
+on:
+  push:
+    branches:
+      - "testing"
+
+jobs:
+  ci:
+    name: fhfbffbjfbfjg
+    uses: ./.github/workflows/node.js-ci.yml
+
+  test:
+      name: continuoues integration
+      uses: ./.github/workflows/nodetest.yaml
