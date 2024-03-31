@@ -11,5 +11,6 @@ jobs:
     uses: ./.github/workflows/node.js-ci.yml
 
   test:
-      name: continuoues integration
-      uses: ./.github/workflows/nodetest.yaml
+    needs: ci
+    name: continuoues integration
+    uses: ./.github/workflows/nodetest.yaml
