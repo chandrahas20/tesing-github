@@ -1,0 +1,17 @@
+name: on pull request
+
+on:
+  push:
+    branch: [testing]
+
+  pull_request:
+    branch: [master]
+
+    jobs:
+      ci:
+        name: continuoues integration
+        uses: ./.github/workflows/node.js-ci.yml
+
+      test:
+        name: continuoues integration
+        uses: ./.github/workflows/nodetest.yaml
